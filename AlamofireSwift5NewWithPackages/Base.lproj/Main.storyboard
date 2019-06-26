@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,38 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlamofireSwift5NewWithPackages" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ek1-Oa-Jec">
+                                <rect key="frame" x="85" y="283" width="150" height="2"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ijl-V4-FqP">
+                                <rect key="frame" x="40" y="41" width="240" height="234"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ijl-V4-FqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Rew-IO-x4A"/>
+                            <constraint firstItem="ek1-Oa-Jec" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SLn-n6-eCz"/>
+                            <constraint firstItem="Ijl-V4-FqP" firstAttribute="centerX" secondItem="ek1-Oa-Jec" secondAttribute="centerX" id="U45-ON-FDo"/>
+                            <constraint firstItem="Ijl-V4-FqP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="Y7A-zo-qcs"/>
+                            <constraint firstItem="ek1-Oa-Jec" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="Yfo-Wy-gg0"/>
+                            <constraint firstItem="ek1-Oa-Jec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l9A-9e-W6V"/>
+                            <constraint firstItem="ek1-Oa-Jec" firstAttribute="top" secondItem="Ijl-V4-FqP" secondAttribute="bottom" constant="8" symbolic="YES" id="zap-qW-V7k"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ijl-V4-FqP" id="LKa-sh-MOo"/>
+                        <outlet property="progressView" destination="ek1-Oa-Jec" id="BfB-9g-lUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="63.75" y="32.74647887323944"/>
         </scene>
     </scenes>
 </document>

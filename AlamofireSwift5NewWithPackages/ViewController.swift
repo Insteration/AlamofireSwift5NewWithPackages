@@ -11,6 +11,8 @@ import Alamofire
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var imageView: UIImageView!
     
     private func getResult() -> DataRequest {
         
@@ -19,15 +21,8 @@ class ViewController: UIViewController {
             switch responseJSON.result {
             case .success(let value):
                 print("\(value)")
-                
-                //                guard let jsonArray = responseJSON.result as? [[String: Any]] else { return }
-                //                print("Array, \(jsonArray)")
-                //                print("1 object \(jsonArray[0])")
-                //                print("1 id \(jsonArray[0]["id"]!)")
-                
             case .failure(let error):
                 print("\(error)")
-                
             }
         }
     }
@@ -50,7 +45,15 @@ class ViewController: UIViewController {
     }
     
     private func getPicture() {
+        
         AF.request("https://s-media-cache-ak0.pinimg.com/originals/ef/6f/8a/ef6f8ac3c1d9038cad7f072261ffc841.jpg").validate()
+            .downloadProgress { (progress) in
+                print("totalUnitCount:\n", progress.totalUnitCount)
+                print("completedUnitCount:\n", progress.completedUnitCount)
+                print("fractionCompleted:\n", progress.fractionCompleted)
+                print("localizedDescription:\n", progress.localizedDescription!)
+                print("---------------------------------------------")
+        }
     }
     
     override func viewDidLoad() {
