@@ -47,24 +47,34 @@ class ViewController: UIViewController {
     private func getPicture() {
         
         AF.request("https://s-media-cache-ak0.pinimg.com/originals/ef/6f/8a/ef6f8ac3c1d9038cad7f072261ffc841.jpg").validate()
+            
             .downloadProgress { (progress) in
                 print("totalUnitCount:\n", progress.totalUnitCount)
                 print("completedUnitCount:\n", progress.completedUnitCount)
                 print("fractionCompleted:\n", progress.fractionCompleted)
                 print("localizedDescription:\n", progress.localizedDescription!)
                 print("---------------------------------------------")
+                
+                self.progressView.progress = Float(progress.fractionCompleted)
+            }
+        
+            .response { (response) in
+                
+                guard let data = response.data, let image = UIImage(data: data) else { return }
+                self.imageView.image = image
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        getResult()
-//        checkStatus()
+        imageView.layer.cornerRadius = 0.5 * imageView.bounds.size.width
+        //        getResult()
+        //        checkStatus()
         getPicture()
     }
     
-   
+    
     
     
 }
