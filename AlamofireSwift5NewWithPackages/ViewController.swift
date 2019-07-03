@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     let parser = String()
+    let parser2 = String()
     
     private func getResult() -> DataRequest {
         
