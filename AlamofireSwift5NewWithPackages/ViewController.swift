@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var imageView: UIImageView!
     
+    let parser = String()
+    
     private func getResult() -> DataRequest {
         
         return AF.request("http://jsonplaceholder.typicode.com/posts").responseJSON { responseJSON in
