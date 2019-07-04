@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     let parser = String()
     let parser2 = String()
     let parser3 = String()
-    let parser4 = String()
     
     private func getResult() -> DataRequest {
         
