@@ -15,10 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     let parser = String()
-    let parser2 = String()
     let parser3 = String()
     let parser4 = Int()
-    let parser6 = Int()
 
     
     private func getResult() -> DataRequest {
