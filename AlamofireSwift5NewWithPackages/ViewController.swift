@@ -13,10 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var imageView: UIImageView!
-    
-    let parser = String()
-    let parser3 = String()
-    let parser4 = Int()
 
     
     private func getResult() -> DataRequest {
