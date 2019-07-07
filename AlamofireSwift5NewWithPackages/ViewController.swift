@@ -14,15 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var imageView: UIImageView!
     
-//    let parser = String()
-//    let parser3 = String()
-//    let parser4 = Int()
-//    let parser = String()
-//    let parser3 = String()
-//    let parser4 = Int()
     let parser = String()
+    let parser2 = String()
     let parser3 = String()
     let parser4 = Int()
+    let parser5 = Int()
+    let parser4 = Int()
+
+    
     private func getResult() -> DataRequest {
         
         return AF.request("http://jsonplaceholder.typicode.com/posts").responseJSON { responseJSON in
