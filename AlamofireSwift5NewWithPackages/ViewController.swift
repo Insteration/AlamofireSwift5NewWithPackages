@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 //    let parser4 = Int()
 //    let parser5 = Int()
 //    let parser4 = Int()
-    let buba = String()
+//    let buba = String()
     
     private func getResult() -> DataRequest {
         
