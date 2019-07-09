@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     let parser3 = String()
     let parser4 = Int()
     let parser5 = Int()
-//    let parser4 = Int()
-//    let buba = String()
+    let parser4 = Int()
+    let buba = String()
     
     private func getResult() -> DataRequest {
         
